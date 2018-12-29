@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#ff0000")
     .setThumbnail(bot.user.avatarURL)
     kUser.user.send(kEmbed);
-    setTimeout(() => kUser.kick(), 3000);
+    setTimeout(() => kUser.kick(), 2000);
     kickChannel.send(kickEmbed);
 
 
