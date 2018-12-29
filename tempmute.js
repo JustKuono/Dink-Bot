@@ -38,7 +38,7 @@ if(!muterole){
 
  setTimeout(function(){
    tomute.removeRole(muterole.id);
-   message.channel.send(`<@${tomute.id}> has been unmute, don't do anything else stupid.`);
+   message.channel.send(`<@${tomute.id}> has been unmuted, don't do anything else stupid.`);
  }, ms(mutetime));
 
 
