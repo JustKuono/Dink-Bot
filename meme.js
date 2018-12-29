@@ -8,6 +8,7 @@ module.exports.run = async (bot, message, args) => {
     .get(`https://api-to.get-a.life/meme`)
 
      let mEmbed = new Discord.RichEmbed()
+     .setColor("#3ecfe6")
      .addField("Memes", "It's time for your favorite kind of autism.")
      .setImage(body.url)
 
