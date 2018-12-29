@@ -16,10 +16,17 @@ module.exports.run = async (bot, message, args) => {
     .addField("Time", message.createdAt)
     .addField("Reason", kReason);
 
+  //will send a deprecation to console but sends a formatted message to the user...need to fix.
+    
     let kickChannel = message.guild.channels.find(`name`, "bot_shit");
     if(!kickChannel) return message.channel.send("Can't find bot_shit channel.");
     
-    kUser.user.send(kReason);
+    const kEmbed = new Discord.RichEmbed()
+    .setTitle("It appears you have been kicked from Dinkleberg's Gmod Discord :/")
+    .addField("Reason", kReason)
+    .setColor("#ff0000")
+    .setThumbnail(bot.user.avatarURL)
+    kUser.user.send(kEmbed);
     setTimeout(() => kUser.kick(), 3000);
     kickChannel.send(kickEmbed);
 
