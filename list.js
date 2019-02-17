@@ -16,3 +16,4 @@ module.exports.help = {
     name: "list"
 
 }
+//still working out command kinks! not in effect on bot yet!
