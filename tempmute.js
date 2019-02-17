@@ -4,7 +4,6 @@ const ms = require("ms");
 module.exports.run = async (bot, message, args) => {
 
 //d!tempmute @justkuono test test
-   //has a deprecation somewhere, can't find it to fix it
 
 let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get[0]);
 if(!tomute) return message.reply("Sorry, I couldn't find the user you were trying to mute.");
@@ -34,7 +33,7 @@ if(!muterole){
 
 
  await(tomute.addRole(muterole.id));
- message.reply(`<@${tomute.id}> has been muted for ${ms(ms(mutetime))}`);
+ message.reply(`<@${tomute.id}> bippity boppity oops you have been muted for ${ms(ms(mutetime))}`);
 
  setTimeout(function(){
    tomute.removeRole(muterole.id);
